@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body ng-app='app'>
+	<div class='container' ng-controller='PostsCtrl'>
+		<h1>Resent Posts</h1>
+		<input type="text" name="post-text" ng-model='postBody' class="form-control">
+		<button ng-click='addPost()' class='btn btn-default'>Add Post</button>
+		<div>
+			<ul class='list-group'>
+				<!-- 为了使posts按照日期从上倒下排列 -->
+				<li class='list-group-item post-item' ng-repeat="post in posts | orderBy:'-date'">
+					<strong>@{{post.username}}</strong>
+					<span>{{post.body}}</span>
+					<!--<hr>
+					<ul>
+						<li class="comment-item" ng-repeat='post.comment in post.comments'>
+							<strong>@Billy</strong>
+							<span>tuytsd</span>
+						</li>
+						<li>
+							<strong>@Billy</strong>
+							<span>tuytsd</span>
+						</li>
+					</ul>-->
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
+	<!-- html 获取的本地文件都是要放在 static 目录 (在server.js中设置为'./assets'目录了)下的，而且static目录对于该html来说就是根目录 - '/' -->
+	<script type="text/javascript" src="/app.js"></script>
+</body>
+</html>
+
+
+
+
+

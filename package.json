@@ -15,5 +15,18 @@
   "bugs": {
     "url": "https://github.com/TaoJinjin-Thomas/MEAN-stack-learning/issues"
   },
-  "homepage": "https://github.com/TaoJinjin-Thomas/MEAN-stack-learning#readme"
+  "homepage": "https://github.com/TaoJinjin-Thomas/MEAN-stack-learning#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "mkdirp": "^0.5.1",
+    "mongoose": "^4.7.0"
+  }
 }
