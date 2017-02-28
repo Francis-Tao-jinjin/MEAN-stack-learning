@@ -1,0 +1,12 @@
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/social',function(){
+	console.log('mongodb connected from user.js');
+});
+
+var user = mongoose.Schema({
+	username: String,
+	password: {type: String, select: false} //密码不能被返回
+});
+
+module.exports = mongoose.model('User', user);

@@ -1,0 +1,38 @@
+<!--<div class='container' ng-controller='PostsCtrl'>-->
+<div class="container">
+	<h1>Resent Posts</h1>
+	<form role='form' ng-if="appCtrl.isLogin==true">
+		<div class='form-group'>
+			<div class='input-group'>
+				<input id='postInputBar' type="text" ng-model='pstCtrl.postBody' class='form-control' />
+				<span class='input-group-btn'>
+					<button ng-click='pstCtrl.addPost()' class='btn btn-default'>Add Post</button>
+				</span>
+			</div>
+		</div>
+	</form>
+	<!--
+	<input type="text" name="post-text" ng-model='postBody' class="form-control">
+	<button ng-click='addPost()' class='btn btn-default'>Add Post</button>
+	-->
+	<div>
+		<ul class='list-group'>
+			<!-- 为了使posts按照日期从上倒下排列 -->
+			<li class='list-group-item post-item' ng-repeat="post in pstCtrl.posts | orderBy:'-date'">
+				<strong>@{{post.username}}</strong>
+				<span>{{post.body}}</span>
+				<!--<hr>
+				<ul>
+					<li class="comment-item" ng-repeat='post.comment in post.comments'>
+						<strong>@Billy</strong>
+						<span>tuytsd</span>
+					</li>
+					<li>
+						<strong>@Billy</strong>
+						<span>tuytsd</span>
+					</li>
+				</ul>-->
+			</li>
+		</ul>
+	</div>
+</div>
