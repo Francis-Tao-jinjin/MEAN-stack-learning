@@ -35,6 +35,8 @@
   },
   "devDependencies": {
     "mocha": "^3.2.0",
-    "protractor": "^4.0.14"
+    "protractor": "^4.0.14",
+    "mkdirp": "^0.5.1",
+    "mongoose": "^4.7.0"
   }
 }

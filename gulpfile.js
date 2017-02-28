@@ -1,6 +1,9 @@
 var gulp = require('gulp');
+// <<<<<<< HEAD
 
-var theChapter = require('./config')
+// var theChapter = require('./config')
+// =======
+// >>>>>>> caf776304aab7345c0e5a7b586f852c09f91c248
 /*
 var concat = require('gulp-concat');
 // sourcemaps 方便调试
@@ -31,6 +34,11 @@ gulp.task('watch:js',['js'],function(){
 
 gulp.task('watch:css',['css'], function(){
 	gulp.watch('chapter_7/css/**/*.styl',['css']);
+	// gulp.watch('chapter_6/ng/**/*.js',['js']);
 });
+
+// gulp.task('watch:css',['css'], function(){
+// 	gulp.watch('chapter_6/css/**/*.styl',['css']);
+// });
 
 gulp.task('dev',['watch:css','watch:js','dev:server']);
